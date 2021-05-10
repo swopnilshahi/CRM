@@ -1,0 +1,22 @@
+{%  extends 'accounts/main.html' %}
+{% load static %}
+{% block content %}
+
+
+<div class="row">
+	<div class="col-md-6">
+		<div class="card card-body">
+
+			<form action="" method="POST">
+				{% csrf_token %} <!-- CSRF stands for Cross-Site Request Forgery and it's a type of Cross Site Scripting attack that can be sent from a malicious site through a visitor's browser to your server. Django has a built in protection against CSRF attacks using the CSRF middleware which's included by default with each new projec -->
+				{{form}}
+				
+				<input type="submit" name="Submit">
+			</form>
+
+		</div>
+	</div>
+</div>
+
+
+{% endblock %}
